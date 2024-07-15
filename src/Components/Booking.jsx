@@ -1,12 +1,12 @@
 import React from 'react';
-// import Map from './Map'; // We'll create this component for the map integration
+import Map from './Map'; // We'll create this component for the map integration
 
 const Booking = () => {
   return (
     <div className="flex h-screen">
-      <div className="w-1/3 p-4 bg-white">
+      <div className="h-full space-y-32 gap-60 p-4">
         <h2 className="text-2xl font-bold mb-4">Get a ride</h2>
-        <div className="space-y-4">
+        <div className="space-y-4 gap-14">
           <input
             type="text"
             placeholder="Pickup location"
@@ -30,8 +30,8 @@ const Booking = () => {
           </button>
         </div>
       </div>
-      <div className="w-2/3">
-        {/* <Map /> */}
+      <div className="w-2/3 pb-11">
+        <Map />
       </div>
     </div>
   );
