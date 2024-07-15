@@ -6,7 +6,7 @@ function Hero() {
       <div className="w-1/2 pr-8">
         <h1 className="text-5xl mt-24 font-bold mb-4">Don't Wait Just</h1>
         <h1 className=' text-6xl font-bold'>RYDE</h1>
-        <p className="mb-6 text-2xl">Request a ride, hop in, and go.</p>
+        <p className="mb-6 text-2xl">Request a RIDE, HOP, GO.</p>
         
         <div className="mb-4">
           <input 
@@ -30,7 +30,7 @@ function Hero() {
         <img 
           src={taxi} 
           alt="Uber ride illustration" 
-          className="w-full h-auto rounded"
+          className="w-full h-auto rounded-3xl"
         />
       </div>
     </div>

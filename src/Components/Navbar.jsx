@@ -10,7 +10,8 @@ const Navbar = () => {
           <a href="#" className="hover:text-gray-300">Dashboard</a>
           <a href="#" className="hover:text-gray-300">Drive-Info</a>
           <a href="#" className="hover:text-gray-300">Fare Estimator</a>
-          <a href="#" className="hover:text-gray-300">Support
+          <a href="#" className="hover:text-gray-300">Support</a>
+          <a href="#" className="hover:text-gray-300">
             About
             <span className="ml-1">▼</span>
           </a>

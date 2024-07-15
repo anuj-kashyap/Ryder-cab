@@ -3,6 +3,9 @@ import './index.css'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Mobility from './Components/Mobility'
+import Download from './Components/Download'
+import Booking from './Components/Booking'
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Navbar />
       <Hero/>
       <Mobility/>
+      {/* <Booking/> */}
+      <Download/>
+      <Footer/>
       <main className="container mx-auto mt-4">
         {/* <h1 className="text-2xl font-bold"></h1> */}
         {/* Add more content here */}
