@@ -6,20 +6,22 @@ import Download from './Components/Download'
 import Booking from './Components/Booking'
 import Footer from './Components/Footer'
 
-import { BrowserRouter as  Router,Routes,Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import FareEstimator from './pages/FareEstimator'
 
 function App() {
   return (
     <div className="bg-[linear-gradient(to_bottom_right,#030304,#180f16,#2a1517,#341f0f,#302e0b)] min-h-screen text-white">
       <Router>
-      <Navbar />
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Booking" element={<Booking/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Booking" element={<Booking />} />
+          <Route path="/FareEstimator" element={<FareEstimator />} />
         </Routes>
-        
-        <Footer/>
+
+        <Footer />
       </Router>
     </div>
   )

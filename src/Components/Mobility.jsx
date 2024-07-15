@@ -5,11 +5,11 @@ import yes from '../assets/yes.jpg'
 const Mobility = () => {
   return (
     <div className=" bg-white mx-auto text-center mt-20 py-12">
-        
+
       <h1 className=" text-black text-4xl font-bold font-serif mb-12 px-4">
-         Mobility ecosystem driving communities forward
+        Mobility ecosystem driving communities forward
       </h1>
-      
+
       <div className="flex flex-wrap justify-center gap-8">
         <StatCard
           imageSrc={city}

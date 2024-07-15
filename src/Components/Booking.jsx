@@ -1,9 +1,9 @@
 import React from 'react';
-import Map from './Map'; // We'll create this component for the map integration
+import Map from './Map';
 
 const Booking = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex bg-black h-screen">
       <div className="h-full space-y-32 gap-60 p-4">
         <h2 className="text-2xl font-bold mb-4">Get a ride</h2>
         <div className="space-y-4 gap-14">
@@ -17,13 +17,15 @@ const Booking = () => {
             placeholder="Dropoff location"
             className="w-full p-2 border rounded"
           />
-          <select className="w-full p-2 border rounded">
+          <select className="w-full p-2 text-black border rounded">
             <option>Pickup now</option>
-            {/* Add more options */}
+            <option>Pickup later</option>
+
           </select>
-          <select className="w-full p-2 border rounded">
+          <select className="w-full text-black p-2 border rounded">
             <option>For me</option>
-            {/* Add more options */}
+            <option>For Other</option>
+
           </select>
           <button className="w-full p-2 bg-blue-500 text-white rounded">
             Search
