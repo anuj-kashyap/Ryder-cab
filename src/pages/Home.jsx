@@ -10,7 +10,7 @@ function Home() {
       <Hero/>
       <Mobility/>
       <SafetySection/>
-      <Download/>
+      {/* <Download/> */}
     </div>
   )
 }

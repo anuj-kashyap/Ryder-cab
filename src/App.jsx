@@ -9,6 +9,9 @@ import Footer from './Components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import FareEstimator from './pages/FareEstimator'
+import About from './Components/About'
+import Support from './pages/Support'
+import Customer_Support from './Components/Customer_support'
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Booking" element={<Booking />} />
           <Route path="/FareEstimator" element={<FareEstimator />} />
+          <Route path="/About_us" element={<About/>} />
+          <Route path="/Support" element={<Customer_Support/>} />
         </Routes>
+        <Download/>
 
         <Footer />
       </Router>

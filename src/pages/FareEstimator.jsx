@@ -8,7 +8,7 @@ function FareEstimator() {
   return (
     <div>
         <Fare/>
-        <Download/>
+        {/* <Download/> */}
     </div>
   )
 }

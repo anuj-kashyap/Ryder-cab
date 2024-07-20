@@ -18,11 +18,11 @@ const Navbar = () => {
             <Link to='/' className="hover:text-gray-300">Home</Link>
             <Link to='/Booking' className="hover:text-gray-300">Booking</Link>
             <Link to="/FareEstimator" className="hover:text-gray-300">Fare Estimator</Link>
-            <a href="#" className="hover:text-gray-300">Support</a>
-            <a href="#" className="hover:text-gray-300">
+            <Link to="Support" className="hover:text-gray-300">Support</Link>
+            <Link to="/About_us" className="hover:text-gray-300">
               About
               <span className="ml-1">▼</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex items-center space-x-4">
