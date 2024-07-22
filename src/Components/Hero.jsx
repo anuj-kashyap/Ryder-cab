@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
-import taxi from '../assets/3644592.jpg';
-import Cabs from './Cabs'; // Assuming Cabs component is in the same folder
+import taxi from '../assets/taxi3.png';
+import Cabs from './Cabs'; 
 
 const Hero = () => {
   const [pickup, setPickup] = useState('');
@@ -45,9 +45,9 @@ const Hero = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="container  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <motion.div 
-        className="flex flex-col md:flex-row items-center bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg overflow-hidden my-4 sm:my-6 md:my-8 p-4 sm:p-6 md:p-8"
+        className="flex flex-col md:flex-row items-center bg-[radial-gradient(circle_1292px_at_-13.6%_51.7%,rgba(0,56,68,1)_0%,rgba(163,217,185,1)_51.5%,rgba(255,252,247,1)_88.6%)] rounded-lg overflow-hidden my-4 sm:my-6 md:my-8 p-4 sm:p-6 md:p-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -119,7 +119,7 @@ const Hero = () => {
           <motion.img 
             src={taxi} 
             alt="Uber ride illustration" 
-            className="w-full h-auto rounded-3xl shadow-md"
+            className="w-full h-auto rounded-3xl shadow-lg shadow-cyan-400"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}

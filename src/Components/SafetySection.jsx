@@ -3,7 +3,7 @@ import safety from '../assets/safet2.svg'
 
 const SafetySection = () => {
   return (
-    <div className="container mx-auto bg-slate-100 rounded-3xl my-8 sm:my-12 md:my-20 p-4 sm:p-8 md:p-12">
+    <div className="container mx-auto bg-[radial-gradient(circle_1292px_at_-13.6%_51.7%,rgba(0,56,68,1)_0%,rgba(163,217,185,1)_51.5%,rgba(255,252,247,1)_88.6%)] rounded-3xl my-8 sm:my-12 md:my-20 p-4 sm:p-8 md:p-12">
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-black text-center font-bold mb-8 sm:mb-12">
         We care about safety
       </h1>

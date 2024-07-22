@@ -3,7 +3,7 @@ import cab from '../assets/cab.jpg'
 
 const TaxiBooking = () => {
   return (
-    <div className="text-white bg-yellow-950 rounded-2xl my-8 mx-4 sm:mx-8 lg:mx-12 p-4 sm:p-6 lg:p-8">
+    <div className="text-white shadow-lg shadow-white bg-yellow-950  rounded-2xl my-8 mx-4 sm:mx-8 lg:mx-12 p-4 sm:p-6 lg:p-8">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
           <div className="text-yellow-400 mb-2 text-sm sm:text-base">CAB BOOKING</div>
