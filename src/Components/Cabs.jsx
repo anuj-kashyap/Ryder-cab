@@ -1,10 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import basic from '../assets/basic.jpg'
+import stnd from '../assets/stnd.jpg'
+import luxury from '../assets/luxury.jpg'
 
 const Cabs = () => {
   const taxis = [
     {
       name: 'BASIC TAXI',
-      image: '/path-to-basic-taxi.png',
+      image: basic,
       rating: 4.7,
       initialCharge: 2.50,
       upTo50Mins: 1.50,
@@ -15,7 +19,7 @@ const Cabs = () => {
     },
     {
       name: 'STANDARD TAXI',
-      image: '/path-to-standard-taxi.png',
+      image: stnd,
       rating: 5.0,
       initialCharge: 3.20,
       upTo50Mins: 2.10,
@@ -26,7 +30,7 @@ const Cabs = () => {
     },
     {
       name: 'LUXURIOUS TAXI',
-      image: '/path-to-luxurious-taxi.png',
+      image: luxury,
       rating: 5.0,
       initialCharge: 5.68,
       upTo50Mins: 3.60,
@@ -38,11 +42,11 @@ const Cabs = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100 rounded-2xl py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-base text-gray-600 font-semibold mb-2">= OUR TAXI</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">Choose Our Taxi</h2>
+          {/* <p className="text-6xl text-gray-600  font-semibold mb-2">OUR TAXI</p> */}
+          <h2 className="text-5xl font-bold text-gray-900 mb-2">Choose Our Taxi</h2>
           <h3 className="text-2xl text-gray-600 mb-4">Collection</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -53,13 +57,34 @@ const Cabs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {taxis.map((taxi, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src={taxi.image} alt={taxi.name} className="w-full h-48 object-cover" />
+            <motion.div
+              key={index}
+              className="bg-white text-black rounded-lg shadow-md overflow-hidden"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3 },
+              }}
+            >
+              <motion.img
+                src={taxi.image}
+                alt={taxi.name}
+                className="w-full h-48 object-cover"
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.3 },
+                }}
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{taxi.name}</h3>
-                <div className="bg-yellow-400 text-white text-sm font-bold px-2 py-1 rounded-full inline-block mb-4">
+                <motion.div
+                  className="bg-yellow-400 text-white text-sm font-bold px-2 py-1 rounded-full inline-block mb-4"
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.2 },
+                  }}
+                >
                   ★ {taxi.rating}
-                </div>
+                </motion.div>
                 <table className="w-full text-sm mb-4">
                   <tbody>
                     <tr><td>Initial Charge:</td><td>${taxi.initialCharge.toFixed(2)}</td></tr>
@@ -70,11 +95,18 @@ const Cabs = () => {
                     <tr><td>Air Conditioner:</td><td>{taxi.airConditioner}</td></tr>
                   </tbody>
                 </table>
-                <button className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-yellow-500 transition duration-300">
+                <motion.button
+                  className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded"
+                  whileHover={{
+                    scale: 1.05,
+                    backgroundColor: "#e2b616",
+                    transition: { duration: 0.2 },
+                  }}
+                >
                   BOOK NOW
-                </button>
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

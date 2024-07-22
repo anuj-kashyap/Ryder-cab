@@ -1,52 +1,51 @@
 import React from 'react'
 
-
 function Footer() {
     return (
-        <footer className=" text-white py-8 px-4 md:py-12 md:px-8">
+        <footer className=" text-white py-8 px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
-                <div className="flex flex-wrap justify-between">
-                    <div className="w-full md:w-1/2 lg:w-1/4 mb-8">
-                        <h1 className='text-4xl'>Ryder</h1>
-                        <p className="text-sm leading-relaxed">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div className="space-y-4">
+                        <h1 className='text-3xl sm:text-4xl font-bold'>Ryder</h1>
+                        <p className="text-sm leading-relaxed text-gray-300">
                             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.
                         </p>
                     </div>
                     
-                    <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/6 mb-8">
-                        <h2 className="text-xl md:text-2xl font-bold mb-4">Who We Are</h2>
+                    <div className="space-y-4">
+                        <h2 className="text-xl font-bold">Who We Are</h2>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-gray-300">Home</a></li>
-                            <li><a href="#" className="hover:text-gray-300">About Us</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Blog</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Home</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">About Us</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Contact</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Blog</a></li>
                         </ul>
                     </div>
 
-                    <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/6 mb-8">
-                        <h2 className="text-xl md:text-2xl font-bold mb-4">Important Links</h2>
+                    <div className="space-y-4">
+                        <h2 className="text-xl font-bold">Important Links</h2>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-gray-300">Income Tax Dept.</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Central Board of Excise & Customs</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Ministry of Corporate Affairs</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Employees Provident Fund</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Income Tax Dept.</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Central Board of Excise & Customs</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Ministry of Corporate Affairs</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Employees Provident Fund</a></li>
                         </ul>
                     </div>
 
-                    <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/6 mb-8">
-                        <h2 className="text-xl md:text-2xl font-bold mb-4">What We Do</h2>
+                    <div className="space-y-4">
+                        <h2 className="text-xl font-bold">What We Do</h2>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-gray-300">Income Tax</a></li>
-                            <li><a href="#" className="hover:text-gray-300">FEMA, Foreign Collaboration</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Customs & Excise Related</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Services</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Income Tax</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">FEMA, Foreign Collaboration</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Customs & Excise Related</a></li>
+                            <li><a href="#" className="hover:text-gray-300 transition-colors duration-200">Services</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div className="bg-white mt-8 py-4 text-black text-center text-sm">
-                <p>Copyright © 2024 CA | Powered By Markletechandmedia.com</p>
+            <div className="bg-gray-700 mt-8 py-4 text-center text-sm text-gray-300">
+                <p>Copyright © {new Date().getFullYear()} CA | Powered By Markletechandmedia.com</p>
             </div>
         </footer>
     )

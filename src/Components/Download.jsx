@@ -4,17 +4,27 @@ import as from '../assets/app_store.png'
 
 function Download() {
   return (
-    <div className='max-w-full flex-col mx-auto justify-center content-center'>
-      <div>
-        <h1 className='font-bold text-6xl mb-14  flex justify-center'>Download Our APP</h1>
-      </div>
-      <div className='flex justify-center w-full cursor-pointer mb-10 space-x-36'>
-        <a href="https://play.google.com/store/games?device=windows&utm_source=apac_med&hl=en-IN&utm_medium=hasem&utm_content=Jan0324&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1707570-med-hasem-py-Evergreen-Jan0324-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700076783011871_creativeid_662052581180_device_c&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrd2yxF1nKvgzNiVLRJWb4faJos_lzL5rLdmbqMgo2DUJV35uiN0O-QaAt80EALw_wcB&gclsrc=aw.ds">
-          <img src={ps} alt="" className='w-72 rounded-lg shadow-lg hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out' />
-        </a>
-        <a href="https://www.apple.com/in/app-store/">
-          <img src={as} alt="" className='w-72 rounded-lg shadow-lg hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out' />
-        </a>
+    <div className='w-full px-4 py-8 md:py-16'>
+      <div className='max-w-6xl mx-auto'>
+        <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 md:mb-14 text-center'>
+          Download Our APP
+        </h1>
+        <div className='flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-6 md:space-x-12 lg:space-x-20'>
+          <a href="https://play.google.com/store/games" className='w-full sm:w-auto'>
+            <img 
+              src={ps} 
+              alt="Play Store" 
+              className='w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto rounded-lg shadow-lg hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out' 
+            />
+          </a>
+          <a href="https://www.apple.com/in/app-store/" className='w-full sm:w-auto'>
+            <img 
+              src={as} 
+              alt="App Store" 
+              className='w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto rounded-lg shadow-lg hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out' 
+            />
+          </a>
+        </div>
       </div>
     </div>
   )
