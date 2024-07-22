@@ -4,7 +4,7 @@ import cover from '../assets/cover.jpg'
 import yes from '../assets/yes.jpg'
 const Mobility = () => {
   return (
-    <div className=" bg-white mx-auto text-center mt-20 py-12">
+    <div className=" bg-white max-w-7xl rounded-3xl mx-auto text-center mt-20 py-12">
 
       <h1 className=" text-black text-4xl font-bold font-serif mb-12 px-4">
         Mobility ecosystem driving communities forward

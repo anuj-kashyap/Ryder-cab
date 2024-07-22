@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Calendar, Tag, Info } from 'lucide-react';
 import taxi from '../assets/3644592.jpg';
+import Cabs from './Cabs'; // Assuming Cabs component is in the same folder
 
-function Hero() {
+const Hero = () => {
   const [pickup, setPickup] = useState('');
   const [destination, setDestination] = useState('');
   const [pickupSuggestions, setPickupSuggestions] = useState([]);
   const [destinationSuggestions, setDestinationSuggestions] = useState([]);
+  const [showCabs, setShowCabs] = useState(false); // State to show/hide Cabs component
 
   const API_KEY = import.meta.env.VITE_APP_GEOAPIFY_API_KEY; // Replace with your actual API key
 
@@ -42,23 +45,23 @@ function Hero() {
   };
 
   return (
-    <div className="flex text-white p-8">
-      <div className="w-1/2 pr-8">
-        <h1 className="text-5xl mt-24 font-bold mb-4">Don't Wait Just</h1>
-        <h1 className='text-6xl font-bold'>RYDE</h1>
-        <p className="mb-6 text-2xl">Request a RIDE, HOP, GO.</p>
-        
-        <div className="mb-4">
-          <div className="relative">
+    <div className="container max-h-full mx-auto max-w-7xl px-4">
+      <div className="flex flex-col md:flex-row items-center bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg overflow-hidden my-6 p-8">
+        <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0">
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">Don't Wait Just</h1>
+          <h2 className="text-6xl font-bold text-orange-600 mb-4">RYDE</h2>
+          <p className="text-2xl text-gray-700 mb-6">Request a RIDE, HOP, GO.</p>
+          
+          <div className="mb-4 relative">
             <input 
               type="text" 
               placeholder="Enter pickup location" 
-              className="w-full p-3 rounded bg-white text-black mb-2"
+              className="w-full p-3 rounded bg-white text-black mb-2 shadow-md"
               value={pickup}
               onChange={(e) => setPickup(e.target.value)}
             />
             {pickupSuggestions.length > 0 && (
-              <ul className="absolute z-10 bg-white text-black w-full rounded mt-1">
+              <ul className="absolute z-10 bg-white text-black w-full rounded mt-1 shadow-md">
                 {pickupSuggestions.map((suggestion) => (
                   <li 
                     key={suggestion.properties.osm_id} 
@@ -72,16 +75,16 @@ function Hero() {
             )}
           </div>
           
-          <div className="relative">
+          <div className="mb-4 relative">
             <input 
               type="text" 
               placeholder="Enter destination" 
-              className="w-full p-3 rounded bg-white text-black"
+              className="w-full p-3 rounded bg-white text-black shadow-md"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
             />
             {destinationSuggestions.length > 0 && (
-              <ul className="absolute z-10 bg-white text-black w-full rounded mt-1">
+              <ul className="absolute z-10 bg-white text-black w-full rounded mt-1 shadow-md">
                 {destinationSuggestions.map((suggestion) => (
                   <li 
                     key={suggestion.properties.osm_id} 
@@ -94,22 +97,35 @@ function Hero() {
               </ul>
             )}
           </div>
+
+          <div className="flex space-x-4">
+            <button 
+              className="bg-orange-600 text-white font-semibold py-2 px-4 rounded shadow-md hover:bg-orange-700"
+              onClick={() => setShowCabs(true)} // Show Cabs component when clicked
+            >
+              See Prices
+            </button>
+            <button 
+              className="bg-orange-600 text-white font-semibold py-2 px-4 rounded shadow-md hover:bg-orange-700"
+              onClick={() => setShowCabs(true)} // Show Cabs component when clicked
+            >
+              See Cabs
+            </button>
+          </div>
         </div>
-        
-        <button className="bg-white text-black font-semibold py-2 px-4 rounded">
-          See prices
-        </button>
+
+        <div className="w-full md:w-1/2">
+          <img 
+            src={taxi} 
+            alt="Uber ride illustration" 
+            className="w-full h-auto rounded-3xl shadow-md"
+          />
+        </div>
       </div>
-      
-      <div className="w-full">
-        <img 
-          src={taxi} 
-          alt="Uber ride illustration" 
-          className="w-full h-auto rounded-3xl"
-        />
-      </div>
+
+      {showCabs && <Cabs />} {/* Conditionally render Cabs component */}
     </div>
   );
-}
+};
 
 export default Hero;

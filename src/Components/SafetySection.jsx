@@ -2,7 +2,7 @@ import React from 'react';
 import safety from '../assets/safet2.svg'
 const SafetySection = () => {
   return (
-    <div className="container bg-slate-100 mb-20 mt-24 p px-4 py-12">
+    <div className="container bg-slate-100 rounded-3xl mb-20 mt-24 p px-4 py-12">
       <h1 className="text-5xl text-black flex justify-center font-bold mb-12">
         We care about safety
 
