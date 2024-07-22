@@ -55,13 +55,13 @@ const Hero = () => {
         <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-6 md:mb-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-2 sm:mb-4">Don't Wait Just</h1>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-orange-600 mb-2 sm:mb-4">RYDE</h2>
-          <p className="text-xl sm:text-2xl text-gray-700 mb-4 sm:mb-6">Request a RIDE, HOP, GO.</p>
+          <p className="text-xl sm:text-2xl text-white mb-4 sm:mb-6">Request a RIDE, HOP, GO.</p>
           
           <div className="mb-4 relative">
             <input 
               type="text" 
               placeholder="Enter pickup location" 
-              className="w-full p-2 sm:p-3 rounded bg-white text-black mb-2 shadow-md"
+              className="w-full p-2 sm:p-3 rounded-xl bg-white text-black mb-2 shadow-md"
               value={pickup}
               onChange={(e) => setPickup(e.target.value)}
             />
@@ -84,7 +84,7 @@ const Hero = () => {
             <input 
               type="text" 
               placeholder="Enter destination" 
-              className="w-full p-2 sm:p-3 rounded bg-white text-black shadow-md"
+              className="w-full p-2 sm:p-3 rounded-xl bg-white text-black shadow-md"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
             />
