@@ -32,7 +32,7 @@ const Navbar = () => {
       <nav className="text-white p-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold">RYDER</span>
+            <Link to='/'><span className="text-3xl font-bold">RYDER</span></Link>
             
             <div className="hidden md:flex items-center gap-10 text-lg">
               <Link to='/' className="hover:text-gray-300">Home</Link>

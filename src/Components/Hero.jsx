@@ -3,6 +3,7 @@ import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import taxi from '../assets/taxi3.png';
 import Cabs from './Cabs'; 
+import hero from '../assets/hero.png'
 
 const Hero = () => {
   const [pickup, setPickup] = useState('');
@@ -117,9 +118,9 @@ const Hero = () => {
 
         <div className="w-full md:w-1/2 mt-6 md:mt-0">
           <motion.img 
-            src={taxi} 
+            src={hero} 
             alt="Uber ride illustration" 
-            className="w-full h-auto rounded-3xl shadow-lg shadow-cyan-400"
+            className="w-full h-auto rounded-3xl shadow-lg shadow-green-400"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import bg from '../assets/bg.jpg'
-import Footer from './Footer';
-import Navbar from './Navbar';
+
 
 function Fare() {
     const [distance, setDistance] = useState('');
@@ -27,17 +25,16 @@ function Fare() {
     };
 
     return (
-        <div className=" flex items-center justify-center bg-cover mt-14 mb-14 bg-center bg-fixed">
+        <div className="flex items-center justify-center bg-cover bg-center bg-fixed p-4 sm:p-6 md:p-8 lg:p-10">
+            <div className="w-full max-w-md bg-white bg-opacity-80 rounded-2xl shadow-2xl backdrop-blur-sm p-4 sm:p-6 md:p-8">
+                <h1 className="text-2xl sm:text-3xl font-extrabold font-serif text-gray-800 text-center mb-4 sm:mb-6">Fare Estimator</h1>
 
-            <div className="w-full max-w-md   p-6 bg-white bg-opacity-80 rounded-2xl shadow-2xl backdrop-blur-sm">
-                <h1 className="text-3xl font-extrabold font-serif mt- text-gray-800 text-center mb-6">Fare Estimator</h1>
-
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                     <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="distance">
                         Distance (km)
                     </label>
                     <input
-                        className="w-full px-4 py-2 text-gray-700 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition-colors"
+                        className="w-full px-3 py-2 sm:px-4 sm:py-2 text-gray-700 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition-colors"
                         id="distance"
                         type="number"
                         placeholder="Enter distance"
@@ -46,12 +43,12 @@ function Fare() {
                     />
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                     <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="passengers">
                         Number of Passengers
                     </label>
                     <select
-                        className="w-full px-4 py-2 text-gray-700 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition-colors"
+                        className="w-full px-3 py-2 sm:px-4 sm:py-2 text-gray-700 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition-colors"
                         id="passengers"
                         value={passengers}
                         onChange={(e) => setPassengers(parseInt(e.target.value))}
@@ -62,13 +59,13 @@ function Fare() {
                     </select>
                 </div>
 
-                <div className="mb-8">
+                <div className="mb-6 sm:mb-8">
                     <label className="block text-gray-700 text-sm font-semibold mb-2">
                         Fare Type
                     </label>
-                    <div className="flex justify-around">
+                    <div className="flex flex-col sm:flex-row sm:justify-around">
                         {['standard', 'premium'].map((type) => (
-                            <label key={type} className="inline-flex items-center">
+                            <label key={type} className="inline-flex items-center mb-2 sm:mb-0">
                                 <input
                                     type="radio"
                                     className="form-radio text-blue-600"
@@ -83,15 +80,12 @@ function Fare() {
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
-                    <p className="text-lg font-semibold text-white mb-2">Estimated Fare</p>
-                    <p className="text-4xl font-bold text-white">${calculateFare()}</p>
+                <div className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl p-4 sm:p-6 text-center transform hover:scale-105 transition-all duration-300">
+                    <p className="text-base sm:text-lg font-semibold text-white mb-2">Estimated Fare</p>
+                    <p className="text-3xl sm:text-4xl font-bold text-white">${calculateFare()}</p>
                 </div>
             </div>
-            <div>
-            </div>
         </div>
-
     );
 }
 
