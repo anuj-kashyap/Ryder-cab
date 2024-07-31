@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
-import taxi from '../assets/taxi3.png';
+// import taxi from '../assets/taxi3.png';
 import Cabs from './Cabs';
 import hero from '../assets/hero.png';
 import { debounce } from './Debounce';
